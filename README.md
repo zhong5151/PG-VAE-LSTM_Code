@@ -18,8 +18,6 @@ The code expects preprocessed `train`, `val`, and `test` datasets. For each spli
 - `energy_available_wm2.npy`: available-energy constraint
 - `water_available_mm_day.npy`: water-availability constraint
 
-Third-party datasets are not redistributed in this repository. Please obtain them from the original data providers described in the manuscript.
-
 ### Requirements
 
 The code requires **Python 3.10 or later** and the following packages:
