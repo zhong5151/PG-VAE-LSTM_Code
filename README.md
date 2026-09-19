@@ -8,15 +8,19 @@ The repository also includes LSTM, ED-LSTM, and VAE-LSTM for ablation experiment
 
 ### Dataset
 
-The model uses 13 reconstructed ET products, ERA5-Land meteorological and land-surface variables, and ancillary land-surface data as input features. ET observations from 462 global eddy-covariance flux-tower sites are used as supervisory labels.
+The dataset used in this study is based on the multi-source ET dataset compiled and reconstructed by Xu et al. (2025). It contains 13 reconstructed global ET products, ERA5-Land meteorological and land-surface variables, ancillary land-surface data, and ET observations from 462 global eddy-covariance flux-tower sites.The final AutoML-fused ET product from Xu et al. (2025) is not used as an input to PG-VAE-LSTM.
 
-The code expects preprocessed `train`, `val`, and `test` datasets. For each split, the main files are:
+The code expects preprocessed `train`, `val`, and `test` datasets containing:
 
 - `X.npy`: input sequences (`N × 365 × 39`)
 - `y.npy`: observed ET
 - `site_id.npy`: flux-tower site IDs
 - `energy_available_wm2.npy`: available-energy constraint
 - `water_available_mm_day.npy`: water-availability constraint
+
+Reference:
+
+Xu, Q., Li, L., Wei, Z., et al. (2025). A multimodal machine learning fused global 0.1° daily evapotranspiration dataset from 1950–2022. *Agricultural and Forest Meteorology*, 372, 110645.
 
 ### Requirements
 
